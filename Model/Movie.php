@@ -14,4 +14,8 @@ class Movie{
     $this->rating = $_rating;
   }
 
+  public function getFullInfo(){
+    echo "TITOLO: $this->title,<br> GENERE: $this->genre,<br> ANNO: $this->year,<br> RATING: $this->rating ";
+  }
+
 }

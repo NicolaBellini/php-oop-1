@@ -15,6 +15,9 @@ var_dump($film_1)
   <title>Document</title>
 </head>
 <body>
-  ciaos
+<div class="container">
+  <h1><?php $film_1->getFullInfo(); ?></h1>
+</div>
+
 </body>
 </html>
