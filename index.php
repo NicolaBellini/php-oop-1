@@ -30,13 +30,12 @@ var_dump($films)
 <div class="container">
  
 
-  <?php foreach($films as $movie): ?>
+  <?php foreach($films as $film): ?>
   <!-- card -->
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title"><?php $film->getfullInfo() ?></h5>
+   
     </div>
   </div>
 
