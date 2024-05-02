@@ -1,5 +1,5 @@
 <?php 
-
+require_once './db.php';
 class Movie{
 
   private $title;
@@ -7,7 +7,7 @@ class Movie{
   private $year;
   private $rating;
 
-  function __construct(string $_title, string $_genre,int $_year, float $_rating)
+  function __construct(string $_title, array $_genre,int $_year, float $_rating)
   {
     $this->title = $_title;
     $this->genre = $_genre;
@@ -16,7 +16,9 @@ class Movie{
   }
 
   public function getFullInfo(){
-    echo "TITOLO: $this->title,<br> GENERE: $this->genre,<br> ANNO: $this->year,<br> RATING: $this->rating ";
+    // ho imploso l' array in modo da poterlo leggere come stringa
+    $genres = implode(', ', $this->genre);
+    echo "TITOLO: $this->title,<br> GENERE: $genres,<br> ANNO: $this->year,<br> RATING: $this->rating ";
   }
 
 }
